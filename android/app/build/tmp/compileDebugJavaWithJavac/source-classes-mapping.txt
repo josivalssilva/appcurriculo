@@ -1,0 +1,14 @@
+com/appcurriculo/ReactNativeFlipper.java
+ com.appcurriculo.ReactNativeFlipper
+ com.appcurriculo.ReactNativeFlipper$1
+ com.appcurriculo.ReactNativeFlipper$2
+ com.appcurriculo.ReactNativeFlipper$2$1
+com/appcurriculo/MainActivity.java
+ com.appcurriculo.MainActivity
+com/appcurriculo/MainApplication.java
+ com.appcurriculo.MainApplication
+ com.appcurriculo.MainApplication$1
+com/appcurriculo/BuildConfig.java
+ com.appcurriculo.BuildConfig
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
