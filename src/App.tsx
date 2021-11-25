@@ -1,6 +1,6 @@
 import {stringLiteral} from '@babel/types';
 import React from 'react';
-import {StyleSheet, View, Image, Text} from 'react-native';
+import {StyleSheet, View, Image, Text, ScrollView} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 import foto from './assets/foto.jpg';
@@ -8,27 +8,51 @@ import foto from './assets/foto.jpg';
 const App = () => {
   return (
     <>
-      <View style={style.page}>
-        <View style={style.container_cabecalho}>
-          <Image source={foto} style={style.foto} />
-          <Text style={style.nome}>Josival Silva</Text>
-          <Text style={style.funcao}>Desenvolvedor Web</Text>
-          <View style={style.redes_sociais}>
-            <Icon name="facebook" />
-            <Icon name="linkedin" />
-            <Icon name="github" />
+      <ScrollView>
+        <View style={style.card_header}>
+          <View style={style.container_cabecalho}>
+            <Image source={foto} style={style.foto} />
+            <Text style={style.nome}>Josival Silva</Text>
+            <Text style={style.funcao}>Desenvolvedor Web</Text>
+            <View style={style.redes_sociais}>
+              <Icon name="facebook" />
+              <Icon name="linkedin" />
+              <Icon name="github" />
+            </View>
+            <View>
+              <Text>Telefone: (81) 988524664</Text>
+              <Text>E-mail: josivalssilva@gmail.com </Text>
+            </View>
           </View>
-        </View>
 
-        <View style={style.card}>
-          <View style={style.card_header}>
-            <Text style={style.funcao}>Experiência Profissional</Text>
+          <View style={style.card_container}>
+            <View style={style.card}>
+              <Text style={style.funcao}>Experiência Profissional</Text>
+              <Text>Professor Universitário (Uninassau) - 6 meses</Text>
+            </View>
           </View>
-          <View style={stringLiteral.card}>
-            <Text>Fui Professor</Text>
+
+          <View style={style.card_container}>
+            <View style={style.card}>
+              <Text style={style.funcao}>Formação Acadêmica</Text>
+              <Text>
+                -Doutorado em Ciência da Computação - CIn/UFPE (em andamento)
+              </Text>
+              <Text>-Mestrado em Informática Aplicada - PPGIA/UFRPE</Text>
+              <Text>-Bacharelado Sistemas de Informação - FACOL</Text>
+            </View>
+          </View>
+
+          <View style={style.card_container}>
+            <View style={style.card}>
+              <Text style={style.funcao}>Idioma</Text>
+              <Text>Inglês (Intermediário)</Text>
+              <Text>Espanhol (Intermediário)</Text>
+              <Text>Português (Nativo)</Text>
+            </View>
           </View>
         </View>
-      </View>
+      </ScrollView>
     </>
   );
 };
@@ -50,12 +74,15 @@ const style = StyleSheet.create({
     marginBottom: 10,
   },
   nome: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: 'bold',
   },
   funcao: {
-    color: '#939341',
-    marginBottom: 15,
+    color: '#000012',
+    marginBottom: 10,
+    fontSize: 15,
+    fontWeight: 'bold',
+    padding: 10,
   },
   redes_sociais: {
     flexDirection: 'row',
@@ -64,17 +91,25 @@ const style = StyleSheet.create({
     backgroundColor: '#FF002',
     marginTop: 10,
   },
+  card_container: {
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 10,
+  },
   card: {
-    width: '80%',
+    width: '90%',
     borderRadius: 5,
     borderWidth: 2,
     justifyContent: 'center',
-    backgroundColor: '#939393',
+    backgroundColor: '#FFFFFF',
+    padding: 10,
   },
   card_header: {
-    width: '60%',
+    width: '100%',
+    height: '100%',
     justifyContent: 'center',
-    backgroundColor: '#939393',
+    backgroundColor: '#93ffe3',
   },
 });
 
